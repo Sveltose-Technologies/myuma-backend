@@ -21,6 +21,8 @@ import termcondition from "./routes/termcondition.routes.js";
 import privacyPolicy from "./routes/privacyPolicy.routes.js";
 import footer from "./routes/footer.routes.js"
 import contactus from "./routes/contactUs.routes.js"
+import booknow from "./routes/bookNow.routes.js"
+import rating from "./routes/rating.routes.js"
 
 dotenv.config();
 
@@ -69,6 +71,8 @@ app.use("/termcondition", termcondition);
 app.use("/privacy-policy",privacyPolicy );
 app.use("/footer-text", footer);
 app.use("/contactus", contactus);
+app.use("/booknow",booknow );
+app.use("/rating", rating)
 
 app.listen(PORT, () => {
   console.log(`server is running at PORT: http://localhost:${PORT}`.bgBlue.black);
